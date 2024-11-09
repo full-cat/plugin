@@ -1,29 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proxy Control</title>
     <style>
-      body {
-        width: 200px;
-        padding: 10px;
-        font-family: Arial, sans-serif;
-      }
-      label {
-        margin-left: 5px;
-      }
+        body {
+            width: 250px;
+            padding: 20px;
+            margin: 0 auto;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h3 {
+            text-align: center;
+            color: #0073e6;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-size: 1em;
+            margin: 10px 0;
+        }
+        input[type="radio"] {
+            margin-right: 8px;
+        }
+        .image-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .image-link img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+        .image-link img:hover {
+            transform: scale(1.05);
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <h3>Control del Proxy</h3>
     <label>
-      <input type="radio" name="proxy" id="enableProxy"> Activar Proxy
-    </label><br>
+        <input type="radio" name="proxy" id="enableProxy"> Activar Proxy
+    </label>
     <label>
-      <input type="radio" name="proxy" id="disableProxy"> Desactivar Proxy
-    </label><br>
-
+        <input type="radio" name="proxy" id="disableProxy"> Desactivar Proxy
+    </label>
+    <!-- Insert image with link to localhost:8100 -->
+    <div class="image-link">
+        <a href="http://localhost:8100" target="_blank">
+            <img src="cercat.png" alt="Home">
+        </a>
+    </div>
     <script src="popup.js"></script>
-  </body>
+</body>
 </html>
