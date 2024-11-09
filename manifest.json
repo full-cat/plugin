@@ -4,14 +4,17 @@
   "version": "1.0",
   "permissions": [
     "proxy",
-    "tabs"
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>"
   ],
   "background": {
-    "scripts": ["background.js"],
-    "persistent": false
+    "page": "background.html"
   },
-  "browser_action": {
-    "default_popup": "popup.html"
-  },
-  "description": "Define un proxy para el navegador programáticamente"
+  "applications": {
+    "gecko": {
+      "id": "proxy-setter@example.com"
+    }
+  }
 }
